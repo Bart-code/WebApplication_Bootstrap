@@ -9,5 +9,12 @@ body
 
 .container
 {
-	
+	background-color:#30B2C7;
+	min-height: 300px;
+}
+
+.test1
+{
+	background-color:#eee;
+	min-height: 100px;
 }
