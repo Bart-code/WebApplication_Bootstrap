@@ -22,37 +22,40 @@
 		<h1 > Cash Assistant </h1>
 	</header>
 	<div class="container bg-container">
-		<div class=" mainPanel col-sm-8 col-md-6 p-4 mt-4">
-			<div class="row ">
-				Name:
+		<div class=" mainPanel col-sm-10 col-md-8 p-4 mt-4">
+			<div class="row ">	
+				<div class="col-md-6">
+					<div class="row ">
+						Amount:
+					</div>
+					<div class="row ">
+						<input type="text" class="form-control" placeholder="Income amount" aria-label="Income">
+					</div>
+					<div class="row ">
+						Date:
+					</div>
+					<div class="row ">
+						<input type="date" class="form-control" id="dateField" aria-label="Date">
+					</div>
+					<div class="row ">
+						Item:
+					</div>
+					<div class="row ">
+						<select id="Item">
+							<option> Graduate </option>
+							<option> Bank</option>
+							<option> Allegro sale </option>
+							<option> Other </option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div style="display:inline-block; vertical-align: top; margin-left: 100px;">
+						<label> Comment: <br/> <textarea type="text" class="textField" > </textarea> </label>
+					</div>
+				</div>
 			</div>
-			<div class="row ">
-				<input type="text" class="form-control" placeholder="User - name" aria-label="UserName">
-			</div>
-			<div class="row rowMargin">
-				Last name:
-			</div>
-			<div class="row ">
-				<input type="text" class="form-control" placeholder="User - last name" aria-label="UserLastName">
-			</div>
-			<div class="row rowMargin">
-				E-mail address:
-			</div>
-			<div class="row ">
-				<input type="text" class="form-control" placeholder="User - name" aria-label="UserMail">
-			</div>
-			<div class="row rowMargin">
-				Login:
-			</div>
-			<div class="row ">
-				<input type="text" class="form-control" placeholder="User - login" aria-label="UserLogin">
-			</div>
-			<div class="row rowMargin">
-				Password
-			</div>
-			<div class="row ">
-				<input type="password" class="form-control" placeholder="User - password" aria-label="UserP">
-			</div>
+
 			<div class="row mt-5">
 				<div class="col-sm ">
 					<a class="btn buttonsStyle" href="index.html" role="button">
