@@ -15,11 +15,25 @@
 	<link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 	
+	<script>
 	
+	function setTimeToField() {
+		var now = new Date();
+		var month = (now.getMonth() + 1);               
+		var day = now.getDate();
+		if (month < 10) 
+			month = "0" + month;
+		if (day < 10) 
+			day = "0" + day;
+		var today = now.getFullYear() + '-' + month + '-' + day;
+		document.getElementById("dateField").value = today;
+	}
+	
+	</script>
 	
 </head>
 
-<body>
+<body onload="setTimeToField()">
 	<header class="mt-4">
 		<h1 > Cash Assistant </h1>
 	</header>
