@@ -7,8 +7,7 @@
 	<meta name="description" content="Zapanuj nad finansami" />
 	<meta name="keywords" content="finanse, pieniądze, budżet" />
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
-	
-	
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="style.css" />
@@ -17,26 +16,49 @@
 	
 	<script>
 	
-	function setTimeToField() {
-		var now = new Date();
-		var month = (now.getMonth() + 1);               
-		var day = now.getDate();
-		if (month < 10) 
-			month = "0" + month;
-		if (day < 10) 
-			day = "0" + day;
-		var today = now.getFullYear() + '-' + month + '-' + day;
-		document.getElementById("dateField").value = today;
-	}
-	
+		function setTimeToField() {
+			var now = new Date();
+			var month = (now.getMonth() + 1);               
+			var day = now.getDate();
+			if (month < 10) 
+				month = "0" + month;
+			if (day < 10) 
+				day = "0" + day;
+			var today = now.getFullYear() + '-' + month + '-' + day;
+			document.getElementById("dateField").value = today;
+		}
 	</script>
-	
+
 </head>
 
+	
 <body onload="setTimeToField()">
+	
 	<header class="mt-4">
 		<h1 > Cash Assistant </h1>
 	</header>
+	
+	<!-- Modal -->
+	<div class="modal  fade" id="exampleModalCenter" tabindex="-1" role="dialog"  aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				  <div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								  <span aria-hidden="true">&times;</span>
+								</button>
+				 </div>
+				  <div class="modal-body">
+					...
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				  </div>
+			</div>
+	  </div>
+	</div>
+	
 	<div class="container bg-container">
 		<div class=" mainPanel col-md-10 col-lg-8 p-4 mt-4">
 			<div class="row">	
@@ -77,12 +99,15 @@
 
 			<div class="row mt-5">
 				<div class="col-sm">
-					<a class="btn buttonsStyle" href="index.html" role="button">
+					<a class="btn buttonsStyle" href="mainSite.html" role="button">
 						<i class="icon-left-big"></i> Back
 					</a>
 				</div>
 				<div class="col-sm ">
-					<a class="btn buttonsStyle" href="index.html" role="button">Submit</a>
+					<!-- Button trigger modal -->
+					<button type="button"  class="btn buttonsStyle"   data-toggle="modal" data-target="#exampleModalCenter">
+						Add income
+					</button>	
 				</div>
 			</div>
 		</div>
