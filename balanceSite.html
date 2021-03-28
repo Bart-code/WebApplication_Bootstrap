@@ -15,7 +15,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 	
 	<script>
-	
 		function setTimeToField() {
 			var now = new Date();
 			var month = (now.getMonth() + 1);               
@@ -38,63 +37,50 @@
 		<h1 > Cash Assistant </h1>
 	</header>
 	
-	<!-- Modal -->
-	<div class="modal  fade" id="exampleModalCenter" tabindex="-1" role="dialog"  aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				  <div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								  <span aria-hidden="true">&times;</span>
-								</button>
-				 </div>
-				  <div class="modal-body">
-					...
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				  </div>
-			</div>
-	  </div>
-	</div>
 	
 	<div class="container bg-container">
 		<div class=" mainPanel col-md-10 col-lg-8 p-4 mt-4">
-			<div class="row">	
-				<div class="col-md-5 col-sm-10 mx-auto">
+			<div class="row">
+					<div class="col-md-5 col-sm-10 mx-auto">			
+						<div class="row pb-1">
+							Time borders:
+						</div>
+						<div class="row pb-2">
+							<select class="textField", id="timeBordersSelector" onchange="setTimeBorders()">
+								<option>Current month</option>
+								<option>Previous month</option>
+								<option>Current year</option>
+								<option>Custom </option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-5 col-sm-10 mx-auto">
+					</div>
 					<div class="row pb-1">
-						Amount:
+						<div class="col-md-5 col-sm-10 mx-auto">
+							<div class="row pb-1">
+								Down border: 
+							</div>
+							<div class="row pb-2">
+								<input type="date" class="textField" id="downDateBorder" />
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-10 mx-auto">
+							<div class="row pb-1">
+								Top border: 
+							</div>
+							<div class="row pb-2">
+								<input type="date" class="textField" id="topDateBorder" />
+							</div>
+						</div>
 					</div>
-					<div class="row pb-2">
-						<input type="number" class="textField" placeholder="Income amount (zł)" aria-label="Income">
+					<div class="row pb-1 mt-3 ">
+							<div class="w-50px">
+								<button type="button" class= "btn buttonsStyle" >
+									Show balance
+								</button>
+							</div>
 					</div>
-					<div class="row pb-1">
-						Date:
-					</div>
-					<div class="row pb-2">
-						<input type="date" class="textField" id="dateField" aria-label="Date">
-					</div>
-					<div class="row pb-1">
-						Item:
-					</div>
-					<div class="row pb-2">
-						<select id="Item" class="textField">
-							<option> Graduate </option>
-							<option> Bank</option>
-							<option> Allegro sale </option>
-							<option> Other </option>
-						</select>
-					</div>
-				</div>
-				<div class="col-md-5 col-sm-10 mx-auto">
-					<div class="row pb-1">
-						Comment:
-					</div>
-					<div class="row">
-						<textarea class="textField textarea" > </textarea>
-					</div>
-				</div>
 			</div>
 
 			<div class="row mt-5">
@@ -104,10 +90,6 @@
 					</a>
 				</div>
 				<div class="col-sm ">
-					<!-- Button trigger modal -->
-					<button type="button"  class="btn buttonsStyle"   data-toggle="modal" data-target="#exampleModalCenter">
-						Add income
-					</button>	
 				</div>
 			</div>
 		</div>
