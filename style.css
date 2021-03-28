@@ -97,3 +97,25 @@ h2
 		margin-bottom: 5px;
 	}
 }
+
+.row table
+{
+	font-size:16px;
+	border: 1px solid #fff;
+}
+
+.row table thead th
+{
+	font-size:18px;
+	font-weight: 100;
+}
+
+.row table tr
+{
+	border: 1px solid #fff;
+}
+
+.row table td
+{
+	border: 1px solid #fff;
+}
