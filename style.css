@@ -83,6 +83,12 @@ h2
 	min-height: 180px;
 }
 
+.timeBorders
+{
+	background-color:white;
+	border: 1px solid #333;
+}
+
 @media(max-width: 575px)
 {
 	.buttonsStyle

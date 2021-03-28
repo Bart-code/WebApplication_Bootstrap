@@ -30,12 +30,16 @@
 		switch(selectorValue)
 		{
 			case "Current month":
+				document.getElementById("topDateBorder").disabled = true;
+				document.getElementById("downDateBorder").disabled = true;
 				setMaxDay( month );
 				if (month < 10) month = '0' + month;
 				downBorder= year+'-'+month+'-01';
 				topBorder= year+'-'+month+'-'+maxDay;
 				break;
 			case "Previous month":
+				document.getElementById("topDateBorder").disabled = true;
+				document.getElementById("downDateBorder").disabled = true;
 				if( month != 1) month--;
 				else
 				{
@@ -48,15 +52,20 @@
 				topBorder= year+'-'+month+'-'+maxDay;
 				break;
 			case "Current year":
+				document.getElementById("topDateBorder").disabled = true;
+				document.getElementById("downDateBorder").disabled = true;
 				downBorder=year + '-01-01';
 				topBorder=year + '-12-31';
 				break;
 			case "Custom":
+				document.getElementById("topDateBorder").disabled = false;
+				document.getElementById("downDateBorder").disabled = false;
 				break;
 		}
 		
 		document.getElementById("downDateBorder").value = downBorder;
 		document.getElementById("topDateBorder").value = topBorder;
+		
 	}
 	
 	function setMaxDay( month )
@@ -107,7 +116,7 @@
 								Down border: 
 							</div>
 							<div class="row pb-2">
-								<input type="date" class="textField" id="downDateBorder" />
+								<input type="date" class="textField timeBorders" id="downDateBorder" />
 							</div>
 						</div>
 						<div class="col-md-5 col-sm-10 mx-auto">
@@ -115,7 +124,7 @@
 								Top border: 
 							</div>
 							<div class="row pb-2">
-								<input type="date" class="textField" id="topDateBorder" />
+								<input type="date" class="textField timeBorders" id="topDateBorder" />
 							</div>
 						</div>
 					</div>
